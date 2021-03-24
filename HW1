@@ -1,21 +1,20 @@
 //1.Create next array of Integers with values: 2,3,1,7,11. Sort them by DESC(reverseOrder).
-
 package com.company;
-
 import java.util.Arrays;
+import java.util.Collections;
 
-public class Main {
 
-    public static void main(String[] args) {
-        Integer[] replaceNum = {3,2,3,1,4,2,8,3};
-        for (int i =0; i< replaceNum.length; i++) {
-            for (int j = i + 1; j < replaceNum.length; j++) {
-                if (replaceNum[i].equals(replaceNum[j])) {
-                    replaceNum[j] = 0;
-                } } }
-        System.out.print(  Arrays.toString(replaceNum));
+class SortExample
+{
+    public static void main(String[] args)
+    {
+        Integer[] arr = {2,3,1,7,11};
+        Arrays.sort(arr, Collections.reverseOrder());
+        System.out.printf("Modified arr[] : %s",
+                Arrays.toString(arr));
     }
 }
+
 
 //2.You get an array of numbers(should contain both positive and negative numbers), and return the sum of all the positive ones. (
 //If there are nothing to sum, sum should be 0)
